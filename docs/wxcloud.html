@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>小程序云开发模板 · Taro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;blockquote&gt;
+&lt;p&gt;自 &lt;code&gt;v1.2.18&lt;/code&gt; 开始支持此功能，仅支持微信小程序&lt;/p&gt;
+&lt;/blockquote&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="小程序云开发模板 · Taro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://taro.aotu.io/taro/index.html"/><meta property="og:description" content="&lt;blockquote&gt;
+&lt;p&gt;自 &lt;code&gt;v1.2.18&lt;/code&gt; 开始支持此功能，仅支持微信小程序&lt;/p&gt;
+&lt;/blockquote&gt;
+"/><meta property="og:image" content="https://taro.aotu.io/taro/img/logo-taro.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://taro.aotu.io/taro/img/logo-taro.png"/><link rel="shortcut icon" href="/taro/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://jdc.jd.com/demo/talenttest/js/url.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/taro/css/prism.css"/><link rel="stylesheet" href="/taro/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/taro/"><img class="logo" src="/taro/img/logo-taro.png" alt="Taro"/><h2 class="headerTitleWithLogo">Taro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/taro/docs/README.html" target="_self">文档</a></li><li class=""><a href="/taro/docs/components-desc.html" target="_self">组件库</a></li><li class=""><a href="/taro/docs/api-desc.html" target="_self">API</a></li><li class=""><a href="https://github.com/NervJS/taro" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/nervjs/taro/edit/master/docs/wxcloud.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">小程序云开发模板</h1></header><article><div><span><blockquote>
+<p>自 <code>v1.2.18</code> 开始支持此功能，仅支持微信小程序</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="使用-小程序云开发项目模板"></a><a href="#使用-小程序云开发项目模板" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用小程序云开发项目模板</h2>
+<p>在 1.2.18 版本中，新增了小程序云开发项目模板。如需使用，请将 CLI 更新至 <code>1.2.18</code> 以上版本。<a href="/taro/docs/GETTING-STARTED.html#更新">更新</a></p>
+<h2><a class="anchor" aria-hidden="true" id="模板目录结构"></a><a href="#模板目录结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>模板目录结构</h2>
+<pre><code class="hljs">├── client                                  小程序端目录
+│   ├── config                              配置目录
+│   │   ├── dev<span class="hljs-selector-class">.js</span>                          开发时配置
+│   │   ├── index<span class="hljs-selector-class">.js</span>                        默认配置
+│   │   └── prod<span class="hljs-selector-class">.js</span>                         打包时配置
+│   ├── dist                                编译结果目录
+│   ├── package<span class="hljs-selector-class">.json</span>
+│   ├── src                                 源码目录
+│   │   ├── app<span class="hljs-selector-class">.scss</span>                        项目总通用样式
+│   │   ├── app<span class="hljs-selector-class">.js</span>                          项目入口文件
+│   │   ├── components                      组件文件目录
+│   │   │   └── login                       login 组件目录
+│   │   │       └── index<span class="hljs-selector-class">.weapp</span><span class="hljs-selector-class">.js</span>          login 组件逻辑
+│   │   └── pages                           页面文件目录
+│   │       └── index                       index 页面目录
+│   │           ├── index<span class="hljs-selector-class">.scss</span>              index 页面逻辑
+│   │           └── index<span class="hljs-selector-class">.js</span>                index 页面样式
+├── cloud                                   服务端目录
+│   └── functions                           云函数目录
+│       └── login                           login 云函数
+│           ├── index<span class="hljs-selector-class">.js</span>                    login 函数逻辑
+│           └── package<span class="hljs-selector-class">.json</span>
+└── project<span class="hljs-selector-class">.config</span><span class="hljs-selector-class">.json</span>                     小程序项目配置
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="使用要点"></a><a href="#使用要点" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用要点</h3>
+<ol>
+<li>开发时，进入 client 目录，在此目录下运行相关编译预览或打包命令</li>
+<li>使用微信开发者工具调试项目，请将项目整个文件夹作为运行目录。 注意： 不是 client 中生成的 dist 文件夹</li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#使用-小程序云开发项目模板">使用小程序云开发项目模板</a></li><li><a href="#模板目录结构">模板目录结构</a><ul class="toc-headings"><li><a href="#使用要点">使用要点</a></li></ul></li></ul></nav></div><footer class="footer" id="footer"><div class="footer-container"><div class="footer-logo-container"><div class="footer-logo"></div></div><div class="footer-link-container"><div class="footer-link"><h3>相关资源</h3><p><a class="link" href="https://taro.aotu.io/">Taro</a> - 多端解决方案</p><p><a class="link" href="https://nerv.aotu.io/">Nerv</a> - 类 React 框架</p><p><a class="link" href="https://athena.aotu.io/">Athena</a> - O2 前端流程工具</p><p><a class="link" href="https://at.aotu.io/">AT-UI</a> - Vue 组件库</p></div><div class="footer-link"><h3>社区</h3><p><a href="https://github.com/NervJS/taro/issues">反馈建议</a></p><p><a href="https://github.com/NervJS/taro">GitHub</a></p></div><div class="footer-link"><h3>关于我们</h3><p><a href="https://aotu.io/">凹凸实验室</a></p></div></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '57b9948bff42bc0dbc6c219556fbae35',
+                indexName: 'taro',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

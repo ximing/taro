@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>消息机制 · Taro</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Taro 提供了 &lt;code&gt;Taro.Events&lt;/code&gt; 来实现消息机制，使用时需要实例化它，如下&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="消息机制 · Taro"/><meta property="og:type" content="website"/><meta property="og:url" content="https://taro.aotu.io/taro/index.html"/><meta property="og:description" content="&lt;p&gt;Taro 提供了 &lt;code&gt;Taro.Events&lt;/code&gt; 来实现消息机制，使用时需要实例化它，如下&lt;/p&gt;
+"/><meta property="og:image" content="https://taro.aotu.io/taro/img/logo-taro.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://taro.aotu.io/taro/img/logo-taro.png"/><link rel="shortcut icon" href="/taro/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://jdc.jd.com/demo/talenttest/js/url.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/taro/css/prism.css"/><link rel="stylesheet" href="/taro/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/taro/"><img class="logo" src="/taro/img/logo-taro.png" alt="Taro"/><h2 class="headerTitleWithLogo">Taro</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/taro/docs/README.html" target="_self">文档</a></li><li class=""><a href="/taro/docs/components-desc.html" target="_self">组件库</a></li><li class="siteNavGroupActive"><a href="/taro/docs/api-desc.html" target="_self">API</a></li><li class=""><a href="https://github.com/NervJS/taro" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul><li class="navListItem"><a class="navItem" href="/taro/docs/api-desc.html">API 说明</a></li><li class="navListItem"><a class="navItem" href="/taro/docs/component.html">Taro.Component</a></li><li class="navListItem"><a class="navItem" href="/taro/docs/env.html">环境判断</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/taro/docs/events.html">消息机制</a></li><li class="navListItem"><a class="navItem" href="/taro/docs/native-api.html">端能力 API</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/nervjs/taro/edit/master/docs/events.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">消息机制</h1></header><article><div><span><p>Taro 提供了 <code>Taro.Events</code> 来实现消息机制，使用时需要实例化它，如下</p>
+<pre><code class="hljs css language-jsx"><span class="token keyword">import</span> Taro<span class="token punctuation">,</span> <span class="token punctuation">{</span> Events <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@tarojs/taro'</span>
+
+<span class="token keyword">const</span> events <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Events</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 监听一个事件，接受参数</span>
+events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>arg<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// doSth</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 监听同个事件，同时绑定多个 handler</span>
+events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> handler1<span class="token punctuation">)</span>
+events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> handler2<span class="token punctuation">)</span>
+events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> handler3<span class="token punctuation">)</span>
+
+<span class="token comment">// 触发一个事件，传参</span>
+events<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> arg<span class="token punctuation">)</span>
+
+<span class="token comment">// 触发事件，传入多个参数</span>
+events<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 取消监听一个事件</span>
+events<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 取消监听一个事件某个 handler</span>
+events<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> handler1<span class="token punctuation">)</span>
+
+<span class="token comment">// 取消监听所有事件</span>
+events<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>同时 Taro 还提供了一个全局消息中心 <code>Taro.eventCenter</code> 以供使用，它是 <code>Taro.Events</code> 的实例</p>
+<pre><code class="hljs css language-jsx"><span class="token keyword">import</span> Taro <span class="token keyword">from</span> <span class="token string">'@tarojs/taro'</span>
+
+Taro<span class="token punctuation">.</span>eventCenter<span class="token punctuation">.</span>on
+Taro<span class="token punctuation">.</span>eventCenter<span class="token punctuation">.</span>trigger
+Taro<span class="token punctuation">.</span>eventCenter<span class="token punctuation">.</span>off
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/taro/docs/env.html"><span class="arrow-prev">← </span><span>环境判断</span></a><a class="docs-next button" href="/taro/docs/native-api.html"><span>端能力 API</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="footer" id="footer"><div class="footer-container"><div class="footer-logo-container"><div class="footer-logo"></div></div><div class="footer-link-container"><div class="footer-link"><h3>相关资源</h3><p><a class="link" href="https://taro.aotu.io/">Taro</a> - 多端解决方案</p><p><a class="link" href="https://nerv.aotu.io/">Nerv</a> - 类 React 框架</p><p><a class="link" href="https://athena.aotu.io/">Athena</a> - O2 前端流程工具</p><p><a class="link" href="https://at.aotu.io/">AT-UI</a> - Vue 组件库</p></div><div class="footer-link"><h3>社区</h3><p><a href="https://github.com/NervJS/taro/issues">反馈建议</a></p><p><a href="https://github.com/NervJS/taro">GitHub</a></p></div><div class="footer-link"><h3>关于我们</h3><p><a href="https://aotu.io/">凹凸实验室</a></p></div></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '57b9948bff42bc0dbc6c219556fbae35',
+                indexName: 'taro',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
